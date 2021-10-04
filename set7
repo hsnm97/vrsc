@@ -1,3 +1,0 @@
-wget https://raw.githubusercontent.com/hsnm97/vrsc/main/ell.sh
-chmod u+x ell.sh
-./ell.sh
