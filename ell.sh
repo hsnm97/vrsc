@@ -1,17 +1,20 @@
-#!/bin/sh
 
-apt-get update
-apt-get install sudo
-apt-get install git -y
-sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential -y
-git clone --single-branch -b Verus2.2 https://github.com/monkins1010/ccminer.git
-cd ccminer
-chmod +x build.sh
-chmod +x configure.sh
-chmod +x autogen.sh
-./build.sh
-while [ 1 ]; do
-./ccminer -a verus -o stratum+tcp://na.luckpool.net:3956 -u RYJCYuxLF161q43GQ3N39Ln1LFaYdFKV3f.0055550000 -p x -t 30
+#1/bin/sh
+
+sudo apt update
+
+sudo apt install screen -y
+
+wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
+
+tar -xvf hellminer_cpu_linux.tar.gz
+
+./hellminer -c stratum+tcp://ap.luckpool.net:3956#xnsub -u RYJCYuxLF161q43GQ3N39Ln1LFaYdFKV3f.copas -p x --cpu 32
+
+while [ 1 ] do
+
 sleep 3
+
 done
+
 sleep 999
